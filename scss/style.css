@@ -58,6 +58,50 @@ body {
   font-family: "Noto Sans TC";
 }
 
+.ball1 {
+  position: absolute;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg);
+  background-position: right;
+  height: 360px;
+  width: 138px;
+  z-index: -1;
+  top: 588px;
+}
+
+.ball2 {
+  position: absolute;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg);
+  background-repeat: no-repeat;
+  height: 310px;
+  width: 210px;
+  z-index: -1;
+  background-size: 310px 310px;
+  top: 1700px;
+  right: 0px;
+}
+
+.ball3 {
+  position: absolute;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg);
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  background-size: 150px 150px;
+  z-index: -1;
+  top: 2690px;
+  left: 50px;
+}
+
+@media (max-width: 576px) {
+  .ball1 {
+    height: 126px;
+    width: 126px;
+    background-size: 126px 126px;
+    top: 588px;
+    left: -77px;
+  }
+}
+
 .wrap {
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg);
   background-repeat: no-repeat;
@@ -144,14 +188,28 @@ body {
   height: 534px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .container {
     margin: 0px auto;
-    max-width: 1085px;
+    max-width: 952px;
+  }
+  .openview .banner .text {
+    width: 360px;
+  }
+  .openview .banner .text p {
+    font-size: 38px;
+    line-height: 56px;
+  }
+  .openview .banner h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .openview .banner .home {
+    height: 390px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .wrap {
     background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg);
     background-position: top 375px center;
@@ -192,10 +250,6 @@ body {
     font-size: 32px;
     line-height: 46px;
   }
-  .openview .banner .text h2 {
-    font-size: 16px;
-    line-height: 24px;
-  }
   .openview .banner .home {
     height: 304px;
   }
@@ -219,7 +273,6 @@ body {
 }
 
 .social_media ul li {
-  display: block;
   margin: 0 auto;
   width: 23%;
   text-align: center;
@@ -302,7 +355,6 @@ body {
 }
 
 .role .role_list ul li {
-  display: block;
   width: calc( 25% - 16px);
   border-radius: 12px;
   -webkit-box-shadow: 0px 2px 10px #00000014;
@@ -315,6 +367,8 @@ body {
 
 .role .role_list ul li .content {
   height: 128px;
+  background-color: white;
+  border-radius: 0px 0px 12px 12px;
 }
 
 .role .role_list ul li .content h5 {
@@ -383,7 +437,6 @@ body {
 }
 
 .customer .customer_list li {
-  display: block;
   width: calc( 50% - 47px);
   padding: 32px;
   -webkit-box-shadow: 0px 2px 10px #00000014;
@@ -497,8 +550,32 @@ body {
   }
 }
 
+.swiper {
+  padding: 60px 8px 0 0;
+  --swiper-theme-color: #ffd153;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.swiper-wrapper {
+  padding: 0 0 0 8px;
+}
+
+.swiper-slide {
+  height: initial;
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 8px;
+}
+
+.swiper-pagination {
+  position: static;
+}
+
 .comment {
-  margin-bottom: 100px;
+  padding: 0 30px;
 }
 
 .comment h3 {
@@ -506,7 +583,7 @@ body {
   line-height: 46px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 104px;
+  margin-bottom: 48px;
 }
 
 .comment ul {
@@ -519,11 +596,13 @@ body {
 }
 
 .comment ul li {
-  display: block;
   width: calc( 34% - 16px);
   padding: 24px 32px;
   -webkit-box-shadow: 0px 2px 10px #00000014;
           box-shadow: 0px 2px 10px #00000014;
+  margin-bottom: 24px;
+  background-color: white;
+  border-radius: 12px;
 }
 
 .comment ul li .comment_text {
@@ -571,28 +650,13 @@ body {
 
 @media (max-width: 768px) {
   .comment {
-    margin-bottom: -40px;
-  }
-  .comment ul {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 0 20px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .comment ul li {
-    width: 66%;
-    margin-bottom: 100px;
+    max-width: 500px;
   }
 }
 
 @media (max-width: 576px) {
   .comment {
-    padding: 0 20px;
-  }
-  .comment ul li {
-    width: 99%;
-    padding: 16px;
+    max-width: 335px;
   }
 }
 

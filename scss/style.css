@@ -92,13 +92,45 @@ body {
   left: 50px;
 }
 
-@media (max-width: 576px) {
+.top {
+  width: 71px;
+  height: 71px;
+  position: fixed;
+  top: 670px;
+  right: 48px;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
   .ball1 {
     height: 126px;
     width: 126px;
     background-size: 126px 126px;
-    top: 588px;
+    top: 768px;
     left: -77px;
+  }
+  .ball2 {
+    height: 135px;
+    width: 88px;
+    background-size: 135px 135px;
+    top: 2600px;
+  }
+  .ball3 {
+    height: 153px;
+    width: 77px;
+    background-size: 153px 153px;
+    background-position: right;
+    top: 3700px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ball2 {
+    top: 3080px;
+  }
+  .ball3 {
+    top: 4900px;
   }
 }
 
@@ -110,7 +142,8 @@ body {
 
 .container {
   margin: 0px auto;
-  max-width: 1085px;
+  max-width: 1125px;
+  padding: 0 20px;
 }
 
 .openview {
@@ -136,7 +169,7 @@ body {
   height: 40px;
 }
 
-.openview header .projectfee {
+.openview header .charge {
   padding: 8px 32px;
   background: #FF5D50;
   color: white;
@@ -385,9 +418,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .role {
-    padding: 0px 20px;
-  }
   .role .role_list ul {
     padding: 0px 38px;
     gap: 30px 30px;
@@ -510,7 +540,6 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    padding: 0px 20px;
     margin-bottom: 60px;
   }
   .customer .customer_list {
@@ -650,13 +679,13 @@ body {
 
 @media (max-width: 768px) {
   .comment {
-    max-width: 500px;
+    max-width: 575px;
   }
 }
 
 @media (max-width: 576px) {
   .comment {
-    max-width: 335px;
+    max-width: 370px;
   }
 }
 

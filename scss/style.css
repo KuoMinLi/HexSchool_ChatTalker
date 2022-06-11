@@ -180,7 +180,7 @@ body {
   text-decoration: none;
 }
 
-.openview header a:hover {
+.openview header .charge:hover {
   color: #FF5D50;
   background: white;
 }
@@ -547,7 +547,7 @@ body {
   border: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .customer {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;

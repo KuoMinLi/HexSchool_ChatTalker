@@ -52,6 +52,44 @@ body {
   font-family: "Noto Sans TC";
 }
 
+.top {
+  width: 71px;
+  height: 71px;
+  position: fixed;
+  top: 650px;
+  right: 48px;
+  z-index: 3;
+}
+
+.ball3 {
+  position: absolute;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 204px;
+  width: 96px;
+  background-size: 204px 204px;
+  z-index: -1;
+  top: 1230px;
+  left: 0px;
+}
+
+@media(min-width: 576px){
+  .ball3 {
+    top: 1050px;
+  }
+}
+
+@media(min-width: 768px){
+  .ball3 {
+    height: 360px;
+    width: 94px;
+    background-size: 360px 360px;
+    z-index: -1;
+    top: 830px;
+  }
+}
+
 .container {
   margin: 0px auto;
   min-width: 335px;
@@ -85,10 +123,16 @@ header {
     border-radius: 22px;
     border: none;
   }
+  .charge:hover {
+    color: #FF5D50;
+    background: white;
+    border: 1px solid #FF5D50;
+}
 }
 
 .banner {
-  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg");
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg") #F7F9FD;
+  border-radius: 0px 0px 0px 150px;
   background-repeat: no-repeat;
   background-position: center top;
   margin-bottom: 60px;
@@ -108,11 +152,21 @@ header {
 
 @media(min-width: 576px){
   .wrap {
-    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg");  
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg") ;  
     background-size: 576px;
     background-repeat: no-repeat;
     background-position: right top;
   }
+
+  .background {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background: #F7F9FD;
+    height: 300px;
+    border-radius: 0px 0px 0px 300px;
+  }
+
   header {
     border: none;
     .logo {
@@ -137,6 +191,7 @@ header {
   }
   .container {
     max-width: 768px;
+    padding: 0px 30px;
   }
 }
 
@@ -147,8 +202,12 @@ header {
     background-repeat: no-repeat;
     background-position: right top;
   }
+  .background {
+    height: 365px;
+  }
   .container {
     max-width: 992px;
+    padding: 0px 40px;
   }
   .banner {
     background: none;
@@ -169,6 +228,9 @@ header {
     background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg");
     background-repeat: no-repeat;
     background-position: right top;
+  }
+  .background {
+    height: 470px;
   }
   .container {
     max-width: 1128px;
@@ -203,7 +265,7 @@ header {
           background: white;
         }
       }
-      .default, li:hover {
+      .active, li:hover {
           background: #56C4C5;
           a {
             color: white;
@@ -233,11 +295,13 @@ header {
 }
 
 .plan_list {
+  margin-bottom: 60px;
   .list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     .item {
+      background: white;
       padding: 0 16px;
       width: 100%;
       box-shadow: 0px 2px 10px #00000014;
@@ -263,7 +327,6 @@ header {
         margin-bottom: 27px;
         .person{
           width: calc( 48% - 6px );
-          height: 89px;
           background: #F5F5F5;
           border-radius: 12px;
           h4 {
@@ -277,6 +340,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: baseline;
+            padding-bottom: 16px;
             p {
               font-size: 28px;
               line-height: 32px;
@@ -296,7 +360,6 @@ header {
         }
         .cost{
           width: calc( 48% - 6px );
-          height: 89px;
           background: #F5F5F5;
           border-radius: 12px;
           h4 {
@@ -310,6 +373,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: baseline;
+            padding-bottom: 16px;
             p {
               font-size: 28px;
               line-height: 32px;
@@ -346,7 +410,12 @@ header {
         border: 1px solid #56C4C5;
         background: #56C4C5;
         color: white;
-      }  
+      }
+      .try:hover {
+        color: #56C4C5;
+        background: white;
+        border: 1px solid #56C4C5;
+    }  
     }
   }
 }
@@ -361,6 +430,22 @@ header {
         }
         .content {
           margin-bottom: 32px;
+          .person {
+            h4 {
+              padding-top: 24px;
+            }
+            .number {
+              padding-bottom: 24px;
+            }
+          }
+          .cost {
+            h4 {
+              padding-top: 24px;
+            }
+            .number {
+              padding-bottom: 24px;
+            }
+          }
         }
         ul {
           margin-bottom: 32px;
@@ -380,14 +465,86 @@ header {
 
 @media(min-width: 768px) {
   .plan_list{
-    max-width: 909px;
+    max-width: 1000px;
+    margin-bottom: 100px;
     .list {
       flex-wrap: nowrap;
       justify-content: center;
       gap: 0px 21px;
       .item {
-        width: calc( 50% - 21px);
+        width: calc( 50% - 6px);
       }
     }
   }
+}
+
+.question_list {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
+  .question {
+    width: 95%;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    h3 {
+      background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_plus.svg");
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      background-position: right top;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .active {
+      background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_minus.svg");
+      background-repeat: no-repeat;
+      background-size: 16px 16px;
+      background-position: right top;
+      padding-bottom: 16px;
+      font-weight: bold;
+      color: #56C4C5;
+    }
+    p {
+      font-size: 16px;
+      line-height: 32px;
+      padding-bottom: 8px;
+      display: none;
+    }
+  }
+}
+
+@media(min-width: 576px){
+  .question_list {
+    .question {
+      width: 85%;
+    }
+  }
+}
+
+@media(min-width: 768px){
+  .question_list {
+    .question {
+      width: 80%;
+    }
+  }
+}
+
+
+
+.footer {
+  background: #F5F5F5;
+  color: #221E1F;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 16px 0px;
 }

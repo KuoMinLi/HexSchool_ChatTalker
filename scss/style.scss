@@ -170,7 +170,7 @@ body {
             text-decoration: none;
             
         }
-        a:hover {
+        .charge:hover {
             color: #FF5D50;
             background: white;
         }
@@ -508,7 +508,7 @@ body {
     }
 }
 
-@media(max-width: 768px){
+@media(max-width: 992px){
     .customer {
         flex-wrap: wrap;
         flex-direction: column-reverse;

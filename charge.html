@@ -21,19 +21,107 @@
       <h1>計費方式說明</h1>
       <p>聊天機器人幫你實現增粉、轉單、客服等目標</p>
     </div>
-    <div class="plan_number container">
+    <div class="plan_number container" >
       <h2>彈性選擇，提供您選擇最適合的方案</h2>
-      <div class="swiper">
-        <ul>
-          <li><a href="#">10000位</a></li>
-          <li><a href="#">15000位</a></li>
-          <li><a href="#">20000位</a></li>
-          <li><a href="#">25000位</a></li>
-          <li><a href="#">>25000位</a></li>
+      <div class="swiper" id="comment-swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide default"><a href="#">10000位</a></li>
+          <li class="swiper-slide"><a href="#">15000位</a></li>
+          <li class="swiper-slide"><a href="#">20000位</a></li>
+          <li class="swiper-slide"><a href="#">25000位</a></li>
+          <li class="swiper-slide"><a href="#">>25000位</a></li>
         </ul>
       </div>
     </div>
+    <div class="plan_list container">
+      <ul class="list">
+        <li class="item">
+          <h3>基本版</h3>
+          <p>提供中小企業最必要的功能<br>完整建立分眾以達到精準的行銷自動化</p>
+          <div class="content">
+            <div class="person">
+              <h4>訂閱用戶數</h4>
+              <div class="number">
+                <p>10000</p>
+                <span>位</span>
+              </div>
+            </div>
+            <p>=</p>
+            <div class="cost">
+              <h4>試算每月的費用</h4>
+              <div class="number">
+                <p>600</p>
+                <span>TWD</span>
+              </div>
+            </div>
+          </div>
+          <ul>
+            <li><img class="check" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg" alt="icon_check">支援 Messenger / Instagram 或 LINE 渠道</li>
+            <li><img class="check" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg" alt="icon_check">10 個進階套件</li>
+            <li><img class="check" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg" alt="icon_check">可設定 50 種分眾標籤</li>
+            <li><img class="check" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg" alt="icon_check">客服人機轉接</li>
+          </ul>
+          <a class="try" href="#">立即體驗</a>
+        </li>
+        <li class="item">
+          <h3>標準版</h3>
+          <p>建立企業流量池，全通路數據整合與交換<br>高可靠性服務</p>
+          <div class="content">
+            <div class="person">
+              <h4>訂閱用戶數</h4>
+              <div class="number">
+                <p>10000</p>
+                <span>位</span>
+              </div>
+            </div>
+            <p>=</p>
+            <div class="cost">
+              <h4>試算每月的費用</h4>
+              <div class="number">
+                <p>1,600</p>
+                <span>TWD</span>
+              </div>
+            </div>
+          </div>
+          <ul>
+            <li><img class="check" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg" alt="icon_check">支援多個 Messenger、Instagram 和 LINE 渠道</li>
+            <li><img class="check" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg" alt="icon_check">20 個進階及行銷互動套件</li>
+            <li><img class="check" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg" alt="icon_check">可設定 500 種分眾標籤</li>
+            <li><img class="check" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg" alt="icon_check">客服人機轉接＋自動指派專員處理</li>
+          </ul>
+          <a class="try" href="#">立即體驗</a>
+        </li>
+      </ul>
+    </div>
+
+
 
   </div>
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+  function initSwiper() {
+  const swiper = new Swiper("#comment-swiper", {
+      slidesPerView: 5,
+      breakpoints: {
+      768: {
+          slidesPerView: 5,
+          spaceBetween: 16 ,
+      },
+      576: {
+          slidesPerView: 4.2,
+          spaceBetween: 12 ,
+      },
+      0: {
+          slidesPerView: 3.5,
+          spaceBetween: 6 ,
+      }
+      },
+      
+  });
+  }
+  initSwiper();
+  </script>
 </body>
 </html>

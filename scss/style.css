@@ -180,6 +180,11 @@ body {
   text-decoration: none;
 }
 
+.openview header a:hover {
+  color: #FF5D50;
+  background: white;
+}
+
 .openview .banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -522,7 +527,7 @@ body {
   margin-bottom: 24px;
 }
 
-.customer .customer_text button {
+.customer .customer_text a {
   background: #56C4C5;
   color: #fff;
   border: 1px solid #56C4C5;
@@ -530,6 +535,13 @@ body {
   font-size: 18px;
   line-height: 26px;
   padding: 12px 32px;
+  text-decoration: none;
+}
+
+.customer .customer_text a:hover {
+  color: #56C4C5;
+  background: white;
+  border: white;
 }
 
 @media (max-width: 768px) {
@@ -726,6 +738,12 @@ body {
   line-height: 26px;
   border-radius: 27px;
   text-decoration: none;
+}
+
+.footer_picture a:hover {
+  color: #56C4C5;
+  background: white;
+  border: white;
 }
 
 .footer {
